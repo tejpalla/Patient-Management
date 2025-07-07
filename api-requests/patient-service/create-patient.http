@@ -1,0 +1,10 @@
+POST http://localhost:4000/patients
+Content-Type: application/json
+
+{
+    "name": "Palla Sai Teja",
+    "email":"tejpalla@gmail.com",
+    "address": "213 second street",
+    "dateOfBirth": "2000-03-25",
+    "registeredDate": "2025-07-04"
+}
