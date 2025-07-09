@@ -1,0 +1,4 @@
+
+We are using docker to containerize this application.
+
+We store docker images in docker image registery

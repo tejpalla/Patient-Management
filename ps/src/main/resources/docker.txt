@@ -1,0 +1,41 @@
+// docker run command for patient-service image
+
+docker run --name=patient-service \
+  --hostname=a88fe09ba37a \
+  --env=spring_datasource_username=admin_user \
+  --env=spring_datasource_password=password \
+  --env=spring_datasource_url=jdbc:postgresql://patient-service-db:5432/db \
+  --env=SPRING_JPA_HIBERNATE_DDL_AUTO=update \
+  --env=SPRING_SQL_INIT_MODE=always \
+  --env=PATH=/usr/java/openjdk-21/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+  --env=JAVA_HOME=/usr/java/openjdk-21 \
+  --env=LANG=C.UTF-8 \
+  --env=JAVA_VERSION=21 \
+  --network=internal \
+  --workdir=/app \
+  -p 8080:8080 \
+  --restart=no \
+  --runtime=runc \
+  -d patient-service:latest
+
+
+
+// docker run command for patient-service-db image
+docker run \
+  --name=patient-service-db \
+  --hostname=de09c4ea1955 \
+  --env=POSTGRES_USER=admin_user \
+  --env=POSTGRES_PASSWORD=password \
+  --env=POSTGRES_DB=db \
+  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/17/bin \
+  --env=GOSU_VERSION=1.17 \
+  --env=LANG=en_US.utf8 \
+  --env=PG_MAJOR=17 \
+  --env=PG_VERSION=17.5-1.pgdg120+1 \
+  --env=PGDATA=/var/lib/postgresql/data/db \
+  -v /Users/tejpalla/Documents/projects/db-volumes/patient-service-db:/var/lib/postgresql/data \
+  --network=internal \
+  -p 4000:5432 \
+  --restart=no \
+  --runtime=runc \
+  -d postgres:latest

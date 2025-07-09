@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PatientServiceApplication<ps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.pm.ps.PatientServiceApplication",
+            "projectName": "ps",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
