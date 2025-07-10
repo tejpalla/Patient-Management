@@ -2,11 +2,28 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BillingServiceApplication",
+            "request": "launch",
+            "mainClass": "com.pm.billing_service.BillingServiceApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-PatientServiceApplication<ps>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.pm.ps.PatientServiceApplication",
             "projectName": "ps",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BillingServiceApplication<billing-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.pm.billingservice.BillingServiceApplication",
+            "projectName": "billing-service",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

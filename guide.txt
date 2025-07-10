@@ -2,3 +2,12 @@
 We are using docker to containerize this application.
 
 We store docker images in docker image registery
+
+to work with grpc proto file is needed. 
+
+
+Kafka entry:
+grpc and rest are synchronous ; good for 1-1 microservice communication 
+it waits for response and then continues execution.
+
+for 1-to-many microservice communication 

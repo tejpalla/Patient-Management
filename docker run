@@ -1,0 +1,1 @@
+docker run --name=billing-service --hostname=f7c20368f41f --env=PATH=/usr/java/openjdk-21/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=JAVA_HOME=/usr/java/openjdk-21 --env=LANG=C.UTF-8 --env=JAVA_VERSION=21 --network=internal --workdir=/app -p 8081:8081 -p 9001:9001 --restart=no --runtime=runc -d billing-service:latest

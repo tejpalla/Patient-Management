@@ -7,6 +7,8 @@ docker run --name=patient-service \
   --env=spring_datasource_url=jdbc:postgresql://patient-service-db:5432/db \
   --env=SPRING_JPA_HIBERNATE_DDL_AUTO=update \
   --env=SPRING_SQL_INIT_MODE=always \
+  --env=BILLING_SERVICE_ADDRESS=billing-service \
+  --env=BILLING_SERVICE_GRPC_PORT=9001 \
   --env=PATH=/usr/java/openjdk-21/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
   --env=JAVA_HOME=/usr/java/openjdk-21 \
   --env=LANG=C.UTF-8 \

@@ -1,0 +1,11 @@
+//grpc uses http2 under the hood.
+
+GRPC localhost:9001/BillingService/CreateBillingAccount
+//we are calling the CreateBillingAccount in billing-service proto file
+
+{
+    "patientId": "12333",
+    "name": "John Doe",
+    "email": "John.Doe@example.com"
+}
+ 
